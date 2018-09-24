@@ -1,0 +1,9 @@
+
+	
+all:
+	gcc -c gfx.c -Wall -Wextra -pedantic
+	ar rcs libgfx.a gfx.o
+
+	gcc -o minha minha.c -L. -lgfx -lSDL_gfx -lSDL_ttf -Wall -Wextra -pedantic
+
+	rm minha *.o 
